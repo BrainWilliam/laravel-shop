@@ -18,6 +18,9 @@ Auth::routes();
 Route::group(['middleware'=>'auth'],function(){
 	Route::group(['middleware'=>'email_verified'],function(){
 		Route::get('user_addresses','UserAddressesController@index')->name('user_addressed.index');
+		Route::get('user_addresses/create_and_edit','UserAddressesController@create')->name('user_addresses.create_and_edit');
+		Route::post('user_addresses','UserAddressesController@store')->name('user_addresses.store');
+
 
 
 	});
