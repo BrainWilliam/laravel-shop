@@ -17,8 +17,14 @@ Auth::routes();
 
 Route::group(['middleware'=>'auth'],function(){
 	Route::group(['middleware'=>'email_verified'],function(){
-		Route::get('/test','PagesController@test');
+		Route::get('user_addresses','UserAddressesController@index')->name('user_addressed.index');
+
+
 	});
-	Route::get('/email_verified_notice','PagesController@emailVerifyNotice')->name('email_verified_notice');
+
+	Route::get('email_verified_notice','PagesController@emailVerifyNotice')->name('email_verified_notice');
+	Route::get('email_verified/verify','EmailVerificationsController@verify')->name('email_verified.verify');
+    Route::get('email_verified/send','EmailVerificationsController@send')->name('email_verified.send');
+
 });
 

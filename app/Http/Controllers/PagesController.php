@@ -13,6 +13,6 @@ class PagesController extends Controller
     	return view('pages.email_verify_notice');
     }
     public function test(){
-    	echo 'ok';
+        echo 'ok';
     }
 }
