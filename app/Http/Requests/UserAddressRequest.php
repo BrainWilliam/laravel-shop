@@ -11,7 +11,7 @@ class UserAddressRequest extends Request
         return [
             'province'      => 'required',
             'city'          => 'required',
-            'district'      => 'required',
+            'distinct'      => 'required',
             'address'       => 'required',
             'zip'           => 'required',
             'contact_name'  => 'required',
@@ -23,7 +23,7 @@ class UserAddressRequest extends Request
         return [
             'province'      => '省',
             'city'          => '城市',
-            'district'      => '地区',
+            'distinct'      => '地区',
             'address'       => '详细地址',
             'zip'           => '邮编',
             'contact_name'  => '姓名',
